@@ -305,6 +305,19 @@ addEventListener('keyup', ({ key }) => {
             keys.d.pressed = false
             break;
         case ' ':
+            keys.space.pressed = false
+            projectiles.push(
+                new Projectile({
+                    position: {
+                        x: player.position.x + player.width / 2, //centrar la salida de projectiles
+                        y: player.position.y
+                    },
+                    velocity: {
+                        x: 0,
+                        y: -10
+                    }
+                })
+            )
             //console.log('space');
 
             break;
